@@ -8,7 +8,7 @@
  * @author nec
  */
 public class contact {
-    private int cid;
+    private Integer cid;
     private String fname;
     private String lname;
     private String groupc;
@@ -23,7 +23,7 @@ public class contact {
 
     public contact() {}
     
-    public contact(int cid, String fname, String lname, String groupc, String phone, String email, String address, byte[] pic, int uid) {
+    public contact(Integer cid, String fname, String lname, String groupc, String phone, String email, String address, byte[] pic, int uid) {
         this.cid = cid;
         this.fname = fname;
         this.lname = lname;
