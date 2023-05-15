@@ -247,12 +247,15 @@ public class loginForm extends javax.swing.JFrame {
         ResultSet rs;
         
         try {
-            ps = con.prepareStatement("SELECT username, pass, pic FROM users WHERE username = ? AND pass = ?");
+            ps = con.prepareStatement("SELECT username, pass, pic, id FROM users WHERE username = ? AND pass = ?");
             ps.setString(1, jTextFieldUsername.getText());
             ps.setString(2, String.valueOf(jPasswordField.getPassword()));
             rs = ps.executeQuery();
             
             if (rs.next()) {
+                // get the current user id
+                myContactsForm.currentUserId = rs.getInt("id");
+                System.out.println(rs.getInt("id") + "From Login");
                 myContactsForm mcf = new myContactsForm();
                 mcf.setVisible(true);
                 mcf.pack();
