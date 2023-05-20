@@ -19,10 +19,6 @@ public class myConnection {
         
         Connection con = null;
         try {
-            /**Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-            
-            con = DriverManager.getConnection("jdbc:mysql://localhost:8080/javacontactsapp?" + "user=root&password=");
-            **/
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/javacontactsapp", "root", "");
             System.out.println("Connection is successful");

@@ -105,6 +105,27 @@ public class contactQuery {
         }
     }
     
+    public void deleteContact(int cid) {
+        Connection con = myConnection.getConnection();
+        PreparedStatement ps;
+        try {
+            ps = con.prepareStatement("DELETE FROM mycontact WHERE id = ?;");
+            ps.setInt(1, cid);
+            
+            if (ps.executeUpdate() != 0) {
+                JOptionPane.showMessageDialog(null, "Contact Deleted");
+
+            } else {
+                JOptionPane.showMessageDialog(null, "Something went wrong");
+
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(contactQuery.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+    
     // create a list of contact
     public ArrayList<contact> contactList(int userId) {
         
