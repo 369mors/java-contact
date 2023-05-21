@@ -26,7 +26,7 @@ public class contactQuery {
             ps = con.prepareStatement("INSERT INTO mycontact(fname, lname, groupc, phone, email, address, pic, userId) VALUES (?, ?, ?, ?, ?, ?, ?, ?);");
             ps.setString(1, cont.getFname());
             ps.setString(2, cont.getLname());
-            ps.setString(3, cont.getLname());
+            ps.setString(3, cont.getGroupc());
             ps.setString(4, cont.getPhone());
             ps.setString(5, cont.getEmail());
             ps.setString(6, cont.getAddress());
@@ -59,7 +59,7 @@ public class contactQuery {
             ps = con.prepareStatement(updateQuery);
             ps.setString(1, cont.getFname());
             ps.setString(2, cont.getLname());
-            ps.setString(3, cont.getLname());
+            ps.setString(3, cont.getGroupc());
             ps.setString(4, cont.getPhone());
             ps.setString(5, cont.getEmail());
             ps.setString(6, cont.getAddress());
@@ -85,7 +85,7 @@ public class contactQuery {
             ps = con.prepareStatement(updateQuery);
             ps.setString(1, cont.getFname());
             ps.setString(2, cont.getLname());
-            ps.setString(3, cont.getLname());
+            ps.setString(3, cont.getGroupc());
             ps.setString(4, cont.getPhone());
             ps.setString(5, cont.getEmail());
             ps.setString(6, cont.getAddress());

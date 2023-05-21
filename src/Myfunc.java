@@ -31,7 +31,7 @@ public class Myfunc {
     }
     
     public String browseImage(JLabel lbl) {
-        String path = "";
+        String path = null;
         JFileChooser filec = new JFileChooser();
         filec.setCurrentDirectory(new File(System.getProperty("user.home")));
         

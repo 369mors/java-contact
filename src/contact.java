@@ -17,9 +17,6 @@ public class contact {
     private String address;
     private byte[] pic;
     private int uid;
-    
-    // Alt + ins
-    // to generate constructor & getters & setters
 
     public contact() {}
     
